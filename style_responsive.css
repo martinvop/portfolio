@@ -1,0 +1,154 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header {
+  background: #005aa7;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header img {
+  height: 80px;
+  margin-right: 20px;
+}
+
+nav {
+  background: #0074d9;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+section {
+  max-width: 1000px;
+  background: white;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+h2 {
+  border-left: 5px solid #005aa7;
+  padding-left: 15px;
+  font-size: 1.8em;
+  color: #005aa7;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.3em;
+  color: #005aa7;
+  margin-top: 30px;
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background: #005aa7;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+.swot-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.swot-box {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.forces { background-color: #d8f7d8; }
+.faiblesses { background-color: #ffe0e0; }
+.opportunites { background-color: #fff7cc; }
+.menaces { background-color: #ffe0cc; }
+
+.file-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #005aa7;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.file-link:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header img {
+    margin: 0 0 10px 0;
+    height: 70px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  section {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .swot-container {
+    grid-template-columns: 1fr;
+  }
+
+  .file-link {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
