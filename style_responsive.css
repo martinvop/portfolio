@@ -1,18 +1,133 @@
 
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    width: 100%;
-    background: #005aa7;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
 
-  nav a {
-    padding: 12px;
-    border-top: 1px solid #ffffff33;
+header {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  height: 100px;
+  margin-right: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+nav {
+  background-color: #444;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+section {
+  background: white;
+  margin: 20px auto;
+  padding: 30px;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: #005aa7;
+  border-left: 5px solid #005aa7;
+  padding-left: 10px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
     text-align: center;
   }
 
-  #menu-toggle {
-    display: block;
+  nav {
+    flex-direction: column;
+  }
+
+  section {
+    padding: 20px;
+    margin: 10px;
+  }
+}
+
+
+/* Correction : barre de navigation bleue */
+nav {
+  background-color: #005aa7;
+}
+
+/* Styles SWOT */
+.forces {
+  background-color: #d8f7d8;
+}
+
+.faiblesses {
+  background-color: #ffe0e0;
+}
+
+.opportunites {
+  background-color: #fff7cc;
+}
+
+.menaces {
+  background-color: #ffe0cc;
+}
+
+.swot-box {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+/* Mise en grille 2x2 pour la SWOT */
+.swot-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Responsive : 1 colonne en dessous de 768px */
+@media (max-width: 768px) {
+  .swot-container {
+    grid-template-columns: 1fr;
   }
 }
